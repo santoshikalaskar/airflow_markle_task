@@ -16,7 +16,7 @@ dag = DAG(
     dag_id="dag-2",
     default_args=default_args,
     catchup= False,
-    schedule_interval='@daily')
+    schedule_interval='0 12 30 * *')
 
 check_creatives_file = BashOperator(
         task_id="check_creatives_file",
